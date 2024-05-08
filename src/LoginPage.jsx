@@ -12,7 +12,7 @@ function LoginPage() {
     const [password, setPassword] = useState("");
 
     //set Handler 
-    //เมื่อมีการเปลี่ยนแปลงในช่องกรอก EmailOrMobile ข้อมูลจะถูกส่งมาเก็บที่ setEmailOrMobile
+    //เมื่อมีการเปลี่ยนแปลงในช่องกรอก EmailOrMobile ข้อมูลจะถูกส่งมาเก็บที่ setEmailOrMobile =set to= EmailOrMobile
     const handleChangeEmailOrMobile = ( event ) => {
         // console.log(event.target.value);
         setEmailOrMobile(event.target.value);
@@ -41,7 +41,12 @@ function LoginPage() {
   return (
 
     //สร้าง box จัดการ body form
-         <Box component='form' display='flex' justifyContent='center' marginTop='40px' onSubmit={handleSubmitLogin}>
+         <Box 
+         component='form' 
+         display='flex' 
+         justifyContent='center' 
+         marginTop='40px' 
+         onSubmit={handleSubmitLogin}>
             <Card 
             sx={{
                 p : 4,
@@ -66,13 +71,12 @@ function LoginPage() {
             }}
             >Email or Mobile</Typography>
             <TextField
+            sx={{ input: { color: 'white', fontSize: 20 } }}
             onChange={handleChangeEmailOrMobile}
             fullWidth
             type='text'
             variant='outlined'
             // label='Email or Mobile'
-          
-            
             />
 
             <Divider />
@@ -82,11 +86,12 @@ function LoginPage() {
               sx={{
                 fontSize: 24,
                 fontWeight: 700,
-                marginTop: 10,
+                marginTop: 5,
                 color: '#9494B8'
             }}
             >Password</Typography>
             <TextField
+             sx={{ input: { color: 'white', fontSize: 20 } }}
             onChange={handleChangePassword}
             fullWidth
             type='text'
@@ -106,7 +111,7 @@ function LoginPage() {
                 fontSize: 24,
                 fontWeight: 800
             }}
-            >Login
+            >LOG IN
             </Button>
          
             <Divider  />
