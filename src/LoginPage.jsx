@@ -4,16 +4,8 @@ import { Box, Card, Typography, Button, Divider } from "@mui/material"
 function LoginPage() {
   return (
   
-         <Box component='form' display='flex' flex={1} flexDirection='column' gap='50px' padding='8px'  borderRadius={1}
-         sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-evenly',
-            gap: '50',
-            flex: 1,
-            p: 20
-        }}
-         >
+         <Box display='flex' justifyContent='center' marginTop='40px'>
+         
             <Card 
             component='card_body'
             sx={{
