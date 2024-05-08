@@ -47,7 +47,8 @@ function LoginPage() {
                 p : 4,
                 minWidth: 505, 
                 minHeight: 650, 
-                bgcolor:' #1E1F25'
+                bgcolor:' #1E1F25',
+                color: "white"
             }}
             >
             {/* Text-header */}
@@ -56,37 +57,55 @@ function LoginPage() {
             </Typography>
 
             {/* input email-mmobile */}
+            <Typography
+              sx={{
+                fontSize: 24,
+                fontWeight: 700,
+                marginTop: 10,
+                color: '#9494B8'
+            }}
+            >Email or Mobile</Typography>
             <TextField
             onChange={handleChangeEmailOrMobile}
             fullWidth
             type='text'
             variant='outlined'
-            label='Email or Mobile'
-            sx={{
-                fontWeight: 600,
-            }}
+            // label='Email or Mobile'
+          
             
             />
 
             <Divider />
 
             {/* input password */}
+            <Typography
+              sx={{
+                fontSize: 24,
+                fontWeight: 700,
+                marginTop: 10,
+                color: '#9494B8'
+            }}
+            >Password</Typography>
             <TextField
             onChange={handleChangePassword}
             fullWidth
             type='text'
             variant='outlined'
-            label= 'Password'
-            sx={{
-                fontWeight: 600,
-            }}
+            // label= 'Password'
+           
             />
 
             <Divider />
 
             {/* ปุ่ม  login  */}
             <Button fullWidth variant='contained' type='submit'
-            sx={{bgcolor: '#29292F'}}
+            sx={{
+                bgcolor: '#29292F',
+                marginTop: 10,
+                height: 62,
+                fontSize: 24,
+                fontWeight: 800
+            }}
             >Login
             </Button>
          
